@@ -5,7 +5,7 @@
 int main() {
 
     double loan_amount = 0.0;
-    double annual_rate_percent = 0.0;
+    double annual_rate_percentage = 0.0;
     int number_of_payments = 0;
     std::cout << "Enter the loan amount: $";
     std::cin >> loan_amount;
@@ -13,7 +13,7 @@ int main() {
     std::cin >> annual_rate_percentage;
     std::cout << "Enter the number of monthly payments: ";
     std::cin >> number_of_payments;
-    double monthly_rate = (annual_rate_percent / 100.0) / 12.0;
+    double monthly_rate = (annual_rate_percentage / 100.0) / 12.0;
     double power_factor = std::pow(1.0 + monthly_rate, number_of_payments);
     double monthly_payment = ((monthly_rate * power_factor) / (power_factor - 1.0)) * loan_amount;
     double amount_paid_back = monthly_payment * number_of_payments;
@@ -37,3 +37,4 @@ int main() {
               << "$ " << std::right << std::setw(8) << interest_paid << "\n";
     std::cout << "----------------------------------------\n";
    return 0;}
+   
